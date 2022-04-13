@@ -1,4 +1,5 @@
 import 'package:classroom_assignment/modules/class_rooms/presentation/cubit/class_room_cubit.dart';
+import 'package:classroom_assignment/modules/students/presentation/cubit/student_cubit.dart';
 import 'package:classroom_assignment/modules/subjects/presentation/cubit/subjects_cubit.dart';
 import 'package:classroom_assignment/router.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => ClassRoomCubit()),
         BlocProvider(create: (context) => SubjectsCubit()),
+        BlocProvider(create: (context) => StudentCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
