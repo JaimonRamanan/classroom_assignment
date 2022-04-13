@@ -1,6 +1,7 @@
 import 'package:classroom_assignment/modules/common/presentation/widgets/name_card.dart';
 import 'package:classroom_assignment/modules/subjects/data/models/subjects_model.dart';
 import 'package:classroom_assignment/modules/subjects/presentation/cubit/subjects_cubit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,6 +18,7 @@ class Subjects extends StatelessWidget {
       body: BlocBuilder<SubjectsCubit, SubjectsState>(
         builder: (context, state) {
           if (state is SubjectsLoading) {
+            return const Center(child: CupertinoActivityIndicator());
           } else if (state is SubjectsLoaded) {
             List<SubjectsModel> subjects = state.subjects;
             return GridView.builder(
