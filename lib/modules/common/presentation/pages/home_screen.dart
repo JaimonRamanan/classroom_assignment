@@ -1,4 +1,5 @@
 import 'package:classroom_assignment/modules/class_rooms/presentation/pages/class_room_page.dart';
+import 'package:classroom_assignment/modules/subjects/presentation/pages/subjects.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,9 +10,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   final List<Widget> _widgetOptions = <Widget>[
-    Container(),
+    const Subjects(),
     const ClassRoomPage(),
     Container()
   ];
