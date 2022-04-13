@@ -13,7 +13,7 @@ class Subjects extends StatelessWidget {
     context.read<SubjectsCubit>().fetchSubjects();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Students'),
+        title: const Text('Subjects'),
       ),
       body: BlocBuilder<SubjectsCubit, SubjectsState>(
         builder: (context, state) {
