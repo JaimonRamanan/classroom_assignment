@@ -1,3 +1,4 @@
+import 'package:classroom_assignment/modules/class_rooms/presentation/pages/class_room_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 1;
   final List<Widget> _widgetOptions = <Widget>[
     Container(),
-    Container(),
+    const ClassRoomPage(),
     Container()
   ];
   void _onItemTapped(int index) {
