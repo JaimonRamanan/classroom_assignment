@@ -12,6 +12,7 @@ ClassRoomModel _$ClassRoomModelFromJson(Map<String, dynamic> json) =>
       json['layout'] as String,
       json['name'] as String,
       json['size'] as int,
+      json['subject'] as int?,
     );
 
 Map<String, dynamic> _$ClassRoomModelToJson(ClassRoomModel instance) =>
@@ -20,4 +21,5 @@ Map<String, dynamic> _$ClassRoomModelToJson(ClassRoomModel instance) =>
       'layout': instance.layout,
       'name': instance.name,
       'size': instance.size,
+      'subject': instance.subject,
     };

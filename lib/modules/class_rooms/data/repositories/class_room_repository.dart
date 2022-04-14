@@ -6,4 +6,9 @@ class ClassRoomRepository {
     final ClassRoomApiClient classRoomApiClient = ClassRoomApiClient();
     return classRoomApiClient.fetchClassRoomList();
   }
+
+  Future<ClassRoomModel> addSubject(int classRoomId, int subjectId) async {
+    return ClassRoomApiClient()
+        .updateClassRoomWithSubject(classRoomId, subjectId);
+  }
 }

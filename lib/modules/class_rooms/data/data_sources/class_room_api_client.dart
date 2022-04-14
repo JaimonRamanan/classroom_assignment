@@ -11,4 +11,14 @@ class ClassRoomApiClient {
     );
     return classRooms;
   }
+
+  Future<ClassRoomModel> updateClassRoomWithSubject(
+      int classRoomId, int subjectId) async {
+    FormData formData = FormData.fromMap({
+      'subject': subjectId,
+    });
+    Response response = await Service()
+        .patchApi('$classRoomListEndPoint$classRoomId', formData);
+    return ClassRoomModel.fromJson(response.data);
+  }
 }

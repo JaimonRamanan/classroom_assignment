@@ -13,6 +13,7 @@ class ClassRoomDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // context.read<ClassRoomCubit>().addSubject(1, 4);
     return Scaffold(
       appBar: AppBar(
         title: Text(classRoom.name),

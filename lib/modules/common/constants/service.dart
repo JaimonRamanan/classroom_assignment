@@ -14,4 +14,15 @@ class Service {
     }
     return response;
   }
+
+  Future patchApi(api, data) async {
+    try {
+      dio.options.headers["Content-Type"] = "multipart/form-data";
+      response = await dio.patch('$host/$api?$apiKey', data: data);
+      debugPrint('R E S  I S : $response');
+    } catch (exception) {
+      debugPrint('E X C E P T I O N  O C C U R S $exception');
+    }
+    return response;
+  }
 }
