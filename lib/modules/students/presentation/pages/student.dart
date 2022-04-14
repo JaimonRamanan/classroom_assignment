@@ -1,7 +1,6 @@
 import 'package:classroom_assignment/modules/common/models/route_names.dart';
 import 'package:classroom_assignment/modules/students/data/models/student_model.dart';
 import 'package:classroom_assignment/modules/students/presentation/cubit/student_cubit.dart';
-import 'package:classroom_assignment/modules/students/presentation/pages/student_details_screen.dart';
 import 'package:classroom_assignment/modules/students/presentation/widgets/student_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

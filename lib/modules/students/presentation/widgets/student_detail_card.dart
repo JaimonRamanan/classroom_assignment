@@ -2,7 +2,7 @@ import 'package:classroom_assignment/modules/common/presentation/widgets/common_
 import 'package:classroom_assignment/modules/students/data/models/student_model.dart';
 import 'package:flutter/material.dart';
 
-import 'detail_tile.dart';
+import '../../../common/presentation/widgets/detail_tile.dart';
 
 class StudentDetailCard extends StatelessWidget {
   const StudentDetailCard({
