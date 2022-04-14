@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class NameCard extends StatelessWidget {
   final String title;
-  final Function? onTap;
+  final Function onTap;
   const NameCard({
     Key? key,
     required this.title,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => onTap,
+      onTap: () => onTap(),
       child: Container(
         alignment: Alignment.center,
         child: Text(title),

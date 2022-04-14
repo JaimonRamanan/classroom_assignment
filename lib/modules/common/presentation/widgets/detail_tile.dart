@@ -13,6 +13,7 @@ class DetailTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: const EdgeInsets.only(left: 55.0),
+      dense: true,
       leading: Text(
         title ?? '',
         style: const TextStyle(fontSize: 12.0),

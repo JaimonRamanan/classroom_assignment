@@ -1,3 +1,4 @@
+import 'package:classroom_assignment/modules/common/models/route_names.dart';
 import 'package:classroom_assignment/modules/common/presentation/widgets/name_card.dart';
 import 'package:classroom_assignment/modules/subjects/data/models/subjects_model.dart';
 import 'package:classroom_assignment/modules/subjects/presentation/cubit/subjects_cubit.dart';
@@ -30,7 +31,14 @@ class Subjects extends StatelessWidget {
                   mainAxisSpacing: 20),
               itemCount: 2,
               itemBuilder: (BuildContext context, index) {
-                return NameCard(title: subjects[index].name);
+                return NameCard(
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    RouteNames.subjectDetailScreen,
+                    arguments: subjects[index],
+                  ),
+                  title: subjects[index].name,
+                );
               },
             );
           }

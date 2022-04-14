@@ -33,7 +33,10 @@ class ClassRoomPage extends StatelessWidget {
                             mainAxisSpacing: 20),
                     itemCount: classRoomsList.length,
                     itemBuilder: (BuildContext context, index) {
-                      return NameCard(title: classRoomsList[index].name);
+                      return NameCard(
+                        onTap: () {},
+                        title: classRoomsList[index].name,
+                      );
                     },
                   );
           }

@@ -1,3 +1,4 @@
+import 'package:classroom_assignment/modules/common/presentation/widgets/common_card.dart';
 import 'package:classroom_assignment/modules/students/data/models/student_model.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +17,9 @@ class StudentDetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: CommonCard(
         height: size.height / 2.5,
         width: size.width / 1.5,
-        decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
