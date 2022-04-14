@@ -3,9 +3,6 @@ import 'package:classroom_assignment/modules/class_rooms/presentation/cubit/clas
 import 'package:classroom_assignment/modules/class_rooms/presentation/widgets/class_room_structure.dart';
 import 'package:classroom_assignment/modules/class_rooms/presentation/widgets/conference_structure.dart';
 import 'package:classroom_assignment/modules/class_rooms/presentation/widgets/subject_selection_widget.dart';
-import 'package:classroom_assignment/modules/common/presentation/widgets/common_card.dart';
-import 'package:classroom_assignment/modules/subjects/data/models/subjects_model.dart';
-import 'package:classroom_assignment/modules/subjects/presentation/cubit/subjects_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
