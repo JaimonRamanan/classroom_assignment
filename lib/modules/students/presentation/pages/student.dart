@@ -1,5 +1,7 @@
+import 'package:classroom_assignment/modules/common/models/route_names.dart';
 import 'package:classroom_assignment/modules/students/data/models/student_model.dart';
 import 'package:classroom_assignment/modules/students/presentation/cubit/student_cubit.dart';
+import 'package:classroom_assignment/modules/students/presentation/pages/student_details_screen.dart';
 import 'package:classroom_assignment/modules/students/presentation/widgets/student_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +28,11 @@ class Student extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               itemBuilder: (context, index) {
                 return StudentsListTile(
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    RouteNames.studentDetailScreen,
+                    arguments: studentList[index],
+                  ),
                   name: studentList[index].name,
                   email: studentList[index].email,
                 );

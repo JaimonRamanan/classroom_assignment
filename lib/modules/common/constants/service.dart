@@ -7,7 +7,7 @@ class Service {
   var dio = Dio();
   Future getApi(api) async {
     try {
-      response = await dio.get('$host/$api/?$apiKey');
+      response = await dio.get('$host/$api?$apiKey');
       debugPrint('R E S  I S : $response');
     } catch (exception) {
       debugPrint('E X C E P T I O N  O C C U R S');

@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class StudentsListTile extends StatelessWidget {
   final String? name;
   final String? email;
+  final Function onTap;
   const StudentsListTile({
     Key? key,
     this.name,
     this.email,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -23,6 +25,7 @@ class StudentsListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: ListTile(
+        onTap: () => onTap(),
         leading: const Icon(
           Icons.person_outline_rounded,
           size: 30.0,
