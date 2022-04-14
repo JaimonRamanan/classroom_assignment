@@ -28,15 +28,19 @@ class ClassRoomPage extends StatelessWidget {
                     padding: const EdgeInsets.all(20.0),
                     gridDelegate:
                         const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 3 / 2,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 3 / 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                    ),
                     itemCount: classRoomsList.length,
                     itemBuilder: (BuildContext context, index) {
                       return NameCard(
                         onTap: () => Navigator.pushNamed(
-                            context, RouteNames.classRoomDetailScreen),
+                          context,
+                          RouteNames.classRoomDetailScreen,
+                          arguments: classRoomsList[index],
+                        ),
                         title: classRoomsList[index].name,
                       );
                     },
