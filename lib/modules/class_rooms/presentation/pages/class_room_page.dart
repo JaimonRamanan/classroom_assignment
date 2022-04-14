@@ -11,7 +11,6 @@ class ClassRoomPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<ClassRoomCubit>().fetchClassRooms();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Class Rooms'),

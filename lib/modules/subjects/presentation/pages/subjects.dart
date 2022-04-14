@@ -11,7 +11,6 @@ class Subjects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<SubjectsCubit>().fetchSubjects();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Subjects'),

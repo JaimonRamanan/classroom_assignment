@@ -11,7 +11,6 @@ class Student extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<StudentCubit>().fetchStudentsList();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Students'),
