@@ -5,10 +5,10 @@ part 'subjects_state.dart';
 
 class SubjectsCubit extends Cubit<SubjectsState> {
   SubjectsCubit() : super(SubjectsLoading());
-
+  late List<SubjectsModel> subjects;
   fetchSubjects() async {
     emit(SubjectsLoading());
-    List<SubjectsModel> subjects = await SubjectRepository().getSubjectList();
+    subjects = await SubjectRepository().getSubjectList();
     emit(SubjectsLoaded(subjects));
   }
 }

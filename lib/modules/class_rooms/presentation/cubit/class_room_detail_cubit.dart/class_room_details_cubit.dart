@@ -12,4 +12,11 @@ class ClassRoomDetailCubit extends Cubit<ClassRoomDetailState> {
         await ClassRoomRepository().getClassRoomDetail(classRoomId);
     emit(ClassRoomDetailLoaded(classRoom));
   }
+
+  addSubject(int classRoomId, int subjectId) async {
+    ClassRoomModel classRoom =
+        await ClassRoomRepository().addSubject(classRoomId, subjectId);
+
+    emit(ClassRoomDetailLoaded(classRoom));
+  }
 }
