@@ -1,3 +1,4 @@
+import 'package:classroom_assignment/modules/class_rooms/presentation/pages/class_room_details_screen.dart';
 import 'package:classroom_assignment/modules/common/models/route_names.dart';
 import 'package:classroom_assignment/modules/common/presentation/pages/home_screen.dart';
 import 'package:classroom_assignment/modules/students/data/models/student_model.dart';
@@ -24,6 +25,10 @@ class AppRouter {
           builder: (_) => SubjectDetailsScreen(
             subject: settings.arguments as SubjectsModel,
           ),
+        );
+      case RouteNames.classRoomDetailScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ClassRoomDetailsScreen(),
         );
 
       default:
