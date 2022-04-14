@@ -7,29 +7,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ClassRoomDetailsScreen extends StatefulWidget {
+class ClassRoomDetailsScreen extends StatelessWidget {
   final ClassRoomModel classRoom;
   const ClassRoomDetailsScreen({Key? key, required this.classRoom})
       : super(key: key);
 
   @override
-  State<ClassRoomDetailsScreen> createState() => _ClassRoomDetailsScreenState();
-}
-
-class _ClassRoomDetailsScreenState extends State<ClassRoomDetailsScreen> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    context
-        .read<ClassRoomDetailCubit>()
-        .getClassRoomDetail(widget.classRoom.id);
+    context.read<ClassRoomDetailCubit>().getClassRoomDetail(classRoom.id);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.classRoom.name),
+        title: Text(classRoom.name),
       ),
       body: BlocBuilder<ClassRoomDetailCubit, ClassRoomDetailState>(
         builder: (context, state) {
@@ -43,7 +31,7 @@ class _ClassRoomDetailsScreenState extends State<ClassRoomDetailsScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               children: [
                 SubjectSelectionWidget(classRoom: state.classRoomModel),
-                if (widget.classRoom.layout == 'conference') ...[
+                if (classRoom.layout == 'conference') ...[
                   ConferenceStructure(classRoom: state.classRoomModel)
                 ] else ...[
                   ClassRoomStructure(classRoom: state.classRoomModel)
