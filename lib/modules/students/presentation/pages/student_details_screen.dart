@@ -13,7 +13,7 @@ class StudentDetailsScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Student Details'),
+        title: Text(student?.name ?? ''),
       ),
       body: StudentDetailCard(size: size, student: student),
     );

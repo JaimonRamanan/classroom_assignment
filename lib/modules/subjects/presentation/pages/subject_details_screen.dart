@@ -14,7 +14,7 @@ class SubjectDetailsScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Subject Details'),
+        title: Text(subject?.name ?? ''),
       ),
       body: Center(
         child: CommonCard(
