@@ -1,5 +1,5 @@
 import 'package:classroom_assignment/modules/class_rooms/data/models/class_room_model.dart';
-import 'package:classroom_assignment/modules/class_rooms/presentation/cubit/class_room_cubit.dart';
+import 'package:classroom_assignment/modules/class_rooms/presentation/cubit/class_room_cubit/class_room_cubit.dart';
 import 'package:classroom_assignment/modules/common/models/route_names.dart';
 import 'package:classroom_assignment/modules/common/presentation/widgets/name_card.dart';
 import 'package:flutter/cupertino.dart';

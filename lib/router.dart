@@ -6,6 +6,7 @@ import 'package:classroom_assignment/modules/students/presentation/pages/student
 import 'package:classroom_assignment/modules/subjects/data/models/subjects_model.dart';
 import 'package:classroom_assignment/modules/subjects/presentation/pages/subject_details_screen.dart';
 import 'package:flutter/material.dart';
+
 import 'modules/class_rooms/data/models/class_room_model.dart';
 
 class AppRouter {

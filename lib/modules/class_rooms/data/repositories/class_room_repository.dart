@@ -11,4 +11,8 @@ class ClassRoomRepository {
     return ClassRoomApiClient()
         .updateClassRoomWithSubject(classRoomId, subjectId);
   }
+
+  Future<ClassRoomModel> getClassRoomDetail(int classRoomId) {
+    return ClassRoomApiClient().getClassRoomDetails(classRoomId);
+  }
 }
